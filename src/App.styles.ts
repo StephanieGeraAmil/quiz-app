@@ -21,4 +21,43 @@ export const GlobalStyle= createGlobalStyle`
         font-family: 'Catamaran": sans-serif;
 
     }
-`
+
+`;
+
+export const Wrapper = styled.div`
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+    .p{
+        color:#fff;
+    }
+    .score {
+        color:#333;
+        font-size: 2rem;
+        margin:0;
+    }
+    h1{
+        font-family: Fascinate Inline. 'sans-serif';
+        font-size: 70px;
+        margin 20px;
+        text-align: center;
+
+    }
+    .start, .next {
+        
+       
+        box-shadow: 0px 5-x 10px rgba(0,0,0,0.25);
+        border-radius: 20px;
+        border: 1px solid #aaa;
+        height: 40px;
+        margin: 20px 0;
+        padding: 0 40px;
+
+    }
+    .start {
+        max-width:200px;
+    }
+
+`;
