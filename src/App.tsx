@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {GlobalStyle}  from "./App.styles"
 
 import QuestionCard from './components/QuestionCard';
 import { fetchQuizQuestions, Difficulty, QuestionState } from './API';
@@ -56,6 +57,8 @@ const App=()=> {
 
 
   return (
+    <>
+    <GlobalStyle/>
           <div className="App">
               <h1>Quiz</h1>
               {gameOver || userAnswers.length===TOTAL_QUESTIONS?
@@ -84,7 +87,9 @@ const App=()=> {
            
              
             
-          </div>)
+          </div>
+          
+          </>)
           ;
 
 }
