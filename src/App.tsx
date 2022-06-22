@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import QuestionCard from './components/QuestionCard';
 import { fetchQuizQuestions, Difficulty, QuestionState } from './API';
 
-type AnserObject={
+export type AnswerObject={
   question: string;
   answer: string;
   correct: boolean;
@@ -14,7 +14,7 @@ const App=()=> {
   const [loading, setLoading]= useState(false);
   const [questions, setQuestions]= useState<QuestionState[]>([]);
   const [number, setNumber]= useState(0);
-  const [userAnswers, setUsersAnswers]= useState<AnserObject[]>([]);
+  const [userAnswers, setUsersAnswers]= useState<AnswerObject[]>([]);
   const [score, setScore]= useState(0);
   const [gameOver, setGameOver]=useState(true);
   console.log(userAnswers);
