@@ -47,7 +47,11 @@ const App=()=> {
 
 
   const nextQuestion= ()=>{
-    setNumber(prev=>prev+1);
+    if(number+1<TOTAL_QUESTIONS){
+      setNumber(prev=>prev+1);
+    }else{
+      setGameOver(true);
+    }
   }
 
 
@@ -59,7 +63,7 @@ const App=()=> {
                     Start
                   </button>: null
                 }
-              {!gameOver? <p className="score">Score: {score}</p>:null}
+              <p className="score">Score: {score}</p>
               {loading? <p>Loadding next question....</p>:null}
               {!loading && !gameOver &&questions.length>0 && userAnswers.length!==TOTAL_QUESTIONS ?
           
@@ -71,7 +75,7 @@ const App=()=> {
                       callback={checkAnswer}/> 
 
                :null }
-              {!loading && !gameOver &&questions.length>0 && userAnswers.length==number+1 && number< TOTAL_QUESTIONS -1?
+              {!loading && !gameOver &&questions.length>0 && userAnswers.length!== TOTAL_QUESTIONS?
           
                   <button className="next" onClick={nextQuestion}>
                     Next
