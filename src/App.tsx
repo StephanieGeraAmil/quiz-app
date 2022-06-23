@@ -66,7 +66,7 @@ const App=()=> {
                     Start
                   </button>: null
                 }
-              <p className="score">Score: {score}</p>
+              
               {loading? <p>Loadding next question....</p>:null}
               {!loading && !gameOver &&questions.length>0 && userAnswers.length!==TOTAL_QUESTIONS ?
           
@@ -83,6 +83,10 @@ const App=()=> {
                   <button className="next" onClick={nextQuestion}>
                     Next
                   </button>
+
+              :null}
+              {!loading && !gameOver &&questions.length>0 && userAnswers.length!== TOTAL_QUESTIONS+1?
+                <p className="score">Score: {score}</p>
               :null}
            
              

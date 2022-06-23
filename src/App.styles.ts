@@ -31,10 +31,10 @@ export const Wrapper = styled.div`
     align-items: center;
 
     .p{
-        color:#fff;
+        color:#aaa;
     }
     .score {
-        color:#333;
+        color:black;
         font-size: 2rem;
         margin:0;
     }
@@ -49,7 +49,7 @@ export const Wrapper = styled.div`
         
        
         box-shadow: 0px 5-x 10px rgba(0,0,0,0.25);
-        border-radius: 20px;
+        border-radius: 15px;
         border: 1px solid #aaa;
         height: 40px;
         margin: 20px 0;
